@@ -1,0 +1,20 @@
+html
+
+Copy
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+</head>
+<body>
+	<h1>Chatbot</h1>
+	<form method="GET" action="{% url 'get_response' %}">
+		<input type="text" name="message">
+		<input type="submit" value="Send">
+	</form>
+	{% if response %}
+		<p>{{ response }}</p>
+	{% endif %}
+</body>
+</html>
