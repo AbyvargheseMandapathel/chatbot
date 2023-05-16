@@ -536,7 +536,8 @@
                       {% if message.sender == 'user' %}
                         <div class="user-message">{{ message.content }}</div>
                       {% else %}
-                        <div class="chatbot-message">{{ message.content }}</div>
+                        <div class="chatbot-message">{{ message.content|safe }}
+                        </div>
                       {% endif %}
                     {% endfor %}
                   {% endif %}

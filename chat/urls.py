@@ -17,5 +17,6 @@ urlpatterns = [
     path('course/<str:course_name>/', views.course_detail, name='course_detail'),
     path('events/<str:events_name>/', views.events_detail, name='events_detail'),
     path('faq/', views.faq, name='faq'),
+    # path('trained/', show_trained_data, name='trained'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
